@@ -1,0 +1,232 @@
+/* Vlastní styly */
+.hero {
+  height: 100vh;
+  background: url('img/hero.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+section {
+  padding: 60px 0;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+:root {
+      --lososova: rgba(27, 122, 41, 0.6);
+      --tmava: #2c2c2c;
+      --svetla: #d0ebae;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--svetla);
+      
+    }
+
+    .navbar {
+      background-color: var(--lososova) !important;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      background-color: var(--lososova);
+      color: white;
+      padding: 120px 0;
+      background-image: url('hotel_img/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 121, 11, 0.6);
+    }
+    /* Větší, zvýrazněná tlačítka mimo obrázky */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+  height: 60px;
+  background-color: #176a14; /* světle růžová */
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 1 !important;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Pozice mimo obrázky */
+.carousel-control-prev {
+  left: -80px;
+}
+
+.carousel-control-next {
+  right: -80px;
+}
+
+/* Skryj Bootstrap výchozí ikony */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
+/* Vlastní velké černé šipky */
+.carousel-control-prev::after,
+.carousel-control-next::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Levá šipka */
+.carousel-control-prev::after {
+  border-width: 15px 20px 15px 0;
+  border-color: transparent black transparent transparent;
+}
+
+/* Pravá šipka */
+.carousel-control-next::after {
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent black;
+}
+
+/* Pro mobilní zařízení */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 45px;
+    height: 45px;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  .carousel-control-prev::after,
+  .carousel-control-next::after {
+    border-width: 10px 14px 10px 0;
+  }
+
+  .carousel-control-next::after {
+    border-width: 10px 0 10px 14px;
+  }
+}
+.stars {
+  color: gold;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 2px;
+}
+/* Efekt zobrazení úvodní sekce při načtení */
+.hero {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInHero 1.5s ease-out forwards;
+}
+
+@keyframes fadeInHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, h5 {
+      font-weight: 700;
+    }
+
+    h1.display-4 {
+      font-size: 4rem;
+    }
+  .zoom-hover {
+    overflow: hidden;
+  }
+
+  .zoom-hover img {
+    transition: transform 0.4s ease;
+  }
+
+  .zoom-hover:hover img {
+    transform: scale(1.05);
+  }
+
+
+    h2 {
+      color: var(--lososova);
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-primary,
+    .btn-light {
+      background-color: var(--lososova);
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover,
+    .btn-light:hover {
+      background-color: rgba(15, 116, 15, 0.7);
+    }
+
+    .card-title {
+      color: var(--lososova);
+      font-weight: 600;
+    }
+
+    footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+    .testimonial {
+      background-color: #2a681c;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    .testimonial h5 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
